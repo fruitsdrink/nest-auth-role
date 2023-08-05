@@ -1,4 +1,29 @@
 @host = http://localhost:3000
 
 ###
-GET {{host}}
+GET {{host}}/users
+
+###
+GET {{host}}/users/1
+
+###
+POST  {{host}}/users
+Content-Type: application/json
+
+{
+  "name": "John Doe"
+}
+
+###
+PATCH  {{host}}/users/1
+
+Content-Type: application/json
+
+{
+  "name": "John Doe"
+}
+
+###
+DELETE  {{host}}/users/1
+
+```
